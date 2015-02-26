@@ -1,5 +1,7 @@
 # georgia-weather
 
+[Link to Web App](http://rawgit.com/jaxrtech/georgia-weather/master/index.html)
+
 ## DISCLAIMER
 
 Right now this is really more of a joke and is not entirely accurate (yet at least). Check out a reliable source like [WSB-TV](http://www.wsbtv.com/school-closings/search/) for closing in Georgia.
