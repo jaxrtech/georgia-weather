@@ -5,26 +5,33 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   
-  <link href='http://fonts.googleapis.com/css?family=Oswald:700|Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:700|Open+Sans:400,600' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
   <div class="wrapper">
-    <div class="floating">
+    <div class="header info-box absolute-top-right">
       <h1>"Georgia Weather"</h1>
-
+      <h4>
+        <strong>NOTE: </strong> This just for fun right now and is not entirely accurate.<br>
+        Use <a href="http://www.wsbtv.com/school-closings/search/">WSB-TV</a> or a reliable source.
+      </h4>
       <div data-geo-binding="rootMap">
         Zoom: <input data-bind="value: zoom, valueUpdate:'keypress'" id=
         "txtMapZoom" type="text">
 
         <p data-bind="with: centre">
-          Latitude: <span data-bind="text: lat"></span><br/>
+          Latitude: <span data-bind="text: lat"></span><br>
           Longitude: <span data-bind="text: lng"></span>
         </p>
       </div>
     </div>
-
+    
+    <div class="info-box absolute-bottom-left">
+      <a href="http://www.myfoxatlanta.com/category/234617/weather-closings">Source for Closings</a>
+    </div>
+    
     <div id="rootMap"
          class="full"
          data-geo-type="map"
