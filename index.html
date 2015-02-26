@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>"Georgia Weather"...</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+  <link href='http://fonts.googleapis.com/css?family=Oswald:700|Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="floating">
+      <h1>"Georgia Weather"</h1>
+
+      <div data-geo-binding="rootMap">
+        Zoom: <input data-bind="value: zoom, valueUpdate:'keypress'" id=
+        "txtMapZoom" type="text">
+
+        <p data-bind="with: centre">
+          Latitude: <span data-bind="text: lat"></span><br/>
+          Longitude: <span data-bind="text: lng"></span>
+        </p>
+      </div>
+    </div>
+
+    <div id="rootMap"
+         class="full"
+         data-geo-type="map"
+         data-geo-basemap="Esri.WorldGrayCanvas"
+         data-geo-zoom="8"
+         data-geo-centre="33.23179557851464, -83.5125732421875">
+    </div>
+    
+    <a id="countiesLayer"
+       data-geo-type="featureLayer"
+       data-geo-layer-type="geojson"
+       data-geo-map="rootMap"
+       data-layer-popup-template="<h5>{name} County</h5>"
+       href="counties.geo.json">
+    </a>
+  </div>
+  
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="http://geo5.org/js/geo5.js"></script>
+  
+  <script id="style-script"
+          type="geo/layer-style"
+          data-geo-type="geoStyle"
+          data-geo-layer="countiesLayer">
+    // Filled in by JS
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
